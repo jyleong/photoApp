@@ -18,4 +18,13 @@ class Payment < ActiveRecord::Base
     Stripe::Charge.create customer: customer.id, amount: 1000,
                                   description: 'Premium', currency: 'usd'
   end
+  
+  def create
+    @registration = Registration.new registration_params.merge(email: stripe_params["stripeEmail"],
+                                                               card_token: stripe_params["stripeToken"])
+    raise "Please, check registration errors" unless @registration.valid?
+    @registration.process_payment
+    @registration.save
+    redirect_to @registration, notice: 'Registration was successfully created.'
+  end
 end
