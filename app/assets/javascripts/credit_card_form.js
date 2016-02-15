@@ -16,7 +16,8 @@ $(function() {
   };
   
   $(".cc_form").on('submit', submitHandler);
-    stripeResponseHandler = function (status, response) {
+  
+  stripeResponseHandler = function (status, response) {
     var token, $form;
     $form = $('.cc_form');
     if (response.error) {
