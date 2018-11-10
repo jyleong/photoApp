@@ -1,11 +1,11 @@
 == README
 
-This is the readme for the photoApp I made following the Complete Ruby on Rails course
+This is a description of the photoApp I made following the Complete Ruby on Rails course
 
-This project taught me some of the methods involved with payment 
+This project has taught me some of the methods involved with payment 
 and image hosting on the development and production side.
 
-With production I used heroku and uses services like Sengrid and Amazon AWS for my production
+With production I used Heroku and uses services like Sengrid and Amazon AWS for my production
 * ...
 
 
